@@ -1,0 +1,168 @@
+:root {
+    --primary-color: #EE4D2D;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --star-gold-color: #FFCE3E;
+
+    --navbar-height: 34px;
+    --header-height: 120px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-height-sort-bar: 46px;
+}
+* {
+    box-sizing: inherit;
+
+}
+html {
+    font-size: 62.5%;
+    line-height:1.6rem;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Responsive */
+.grid {
+    /* những màn hình có kích thước > 1200 thì hiện tối đa 1200 */
+    width: 1200px; 
+    /* những màn hình có kích thước < 1200 thì max-width có tác dụng giảm kích thước bằng kích thước màn hình là vẫn hiện 1200  */
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__full-width {
+    width: 100%;
+}
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+/* khối chiếm 2 cột (theo bảng số liệu) */
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: calc((100% / 12) * 2);
+}
+/* Khối chiếm 10 cột */
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: calc((100% / 12) * 10);
+}
+/* Hiện tại có 10 cột muốn chia làm 5 khối => 10/5 = 2 cột */
+/* Vậy 5 khối, mỗi khối chiếm 2 cột thì mỗi khối là */
+.grid__column-2-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: calc((100% / 10) * 2);
+
+}
+/* animation */
+@keyframes faceIn {
+    from {
+        opacity: 0;
+
+    }
+    to {
+        opacity: 1;
+
+    }
+}
+/* button style */
+.btn {
+    min-width: 124px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
+    background-color: var(--white-color);
+
+}
+.btn--size-s {
+    height: 32px;
+    font-size: 12px;
+    padding: 0 8px;
+    
+}
+.btn.btn--normal:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    font-family: "Roboto", sans-serif;
+}
+
+/* selection */
+.select-input {
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: var(--text-color);
+
+
+}
+
+/* pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    
+    
+}
+
+.pagination-item {
+    margin: 0 12px;
+}
+
+.pagination-item__link {
+    --height: 30px;
+    display: block;
+    text-decoration: none;
+    color: #939393;
+    min-width: 40px;
+    text-align: center;
+    line-height: var(--height);
+    font-size: 2rem;
+    font-weight: 300;
+    border-radius: 2px;
+
+}
+
+
+.pagination-item--active .pagination-item__link  {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    background-color: #ed5c3f;
+}
+
+
+
